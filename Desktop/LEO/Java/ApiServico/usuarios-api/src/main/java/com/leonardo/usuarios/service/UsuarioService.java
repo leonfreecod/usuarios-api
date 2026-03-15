@@ -61,7 +61,7 @@ public class UsuarioService {
         usuarioRepository.deleteById(id);
     }
 
-    // Método auxiliar privado para evitar repetição de código (DRY - Don't Repeat Yourself)
+    // metodo auxiliar privado para evitar repetição de código (DRY - Don't Repeat Yourself)
     private void validarEmailUnico(String email) {
         if (usuarioRepository.existsByEmail(email)) {
             throw new RuntimeException("Email já cadastrado: " + email);
