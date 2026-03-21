@@ -11,7 +11,7 @@ public class CorsConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 // Substituímos pelos domínios específicos para maior segurança
-                .allowedOrigins("http://localhost:3000", "https://leofe.com.br", "https://www.leofe.com.br")
+                .allowedOrigins("http://localhost:3000", "https://leofe.com.br", "https://www.leofe.com.br", "null")
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 // Deixe como true se pretender usar autenticação via Cookies/Sessions no futuro
