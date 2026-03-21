@@ -247,25 +247,21 @@
         }
 
 
-        /* Container que segura o Cadastro e a Lista */
-        .main-grid {
+        /* Main content */
+        {
             display: grid;
-            /* Define uma largura fixa para o cadastro (esquerd) e o resto para a lista (direita) */
-            grid-template-columns: 400px 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 30px;
             margin-bottom: 50px;
-
-            /* ESTA LINHA É A CHAVE:
-               'stretch' faz com que ambos os cards tenham EXATAMENTE a mesma altura,
-               baseando-se no que for maior. */
-            align-items: stretch;
         }
 
-        /* Garante que os cards internos ocupem 100% da altura do grid */
-        .form-card, .table-card {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
+        @media (max-width: 1100px) {
+            -grid {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+                gap.main: 30px;
+            }
+
         }
 
         /* Responsividade para não quebrar no celular */
@@ -1347,14 +1343,14 @@
                     <p class="signature-name">
                         <span class="name-gradient">LEONARDO FERREIRA</span>
                         </p>
-                    <div class="signature-subtitle">Full Stack Developer</div>
+                    <div class="signature-subtitle">Software Developer</div>
                 </div>
                 <div class="signature-line"></div>
             </div>
 
     <script>
     // Configurações
-    const API_URL = '/usuarios';
+    const API_URL = 'http://167.234.233.150:8080/api/usuarios';
     let usuariosCache = [];
     let editandoUsuarioId = null;
 
